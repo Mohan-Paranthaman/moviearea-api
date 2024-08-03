@@ -3,13 +3,16 @@ import { Schema, model } from "mongoose";
 
 //write the schema
 const schema = new Schema({
-    title:String,
-    desc: String,
-    boxoffice:String,
-    createdAt: {
-        type: Date,
-        default: Date.now
-      },
+    title:{
+        type:String,
+        requireed:true,
+        unique:true
+    },
+    desc: {
+        type:String,
+        requireed:true,
+    },
+    
 });
 
 //create your model
